@@ -581,58 +581,10 @@ import About from "@/components/About";
 import CTA from "@/components/CTA";
 import Students from "@/components/Students";
 import Testimonials from "@/components/Testimonials";
-
-const faqs = [
-  {
-    q: "What other services are you compatible with?",
-    a: "There are many variations of passages of available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the generators on the.",
-    open: true,
-  },
-  {
-    q: "I have a technical I need resolved, who do I email?",
-    a: "",
-    open: false,
-  },
-  { q: "What other services are you compatible with?", a: "", open: false },
-  { q: "What other services are you compatible with?", a: "", open: false },
-];
-
-const companies = [
-  {
-    id: 1,
-    name: "Coursera",
-    logo: "logo1.png",
-  },
-  {
-    id: 2,
-    name: "Udemy",
-    logo: "logo2.png",
-  },
-  {
-    id: 3,
-    name: "FedEx",
-    logo: "logo3.png",
-  },
-  {
-    id: 4,
-    name: "Education",
-    logo: "logo4.png",
-  },
-  {
-    id: 5,
-    name: "Elecom",
-    logo: "logo5.png",
-  },
-  {
-    id: 6,
-    name: "Indeed",
-    logo: "logo6.png",
-  },
-];
+import FAQ from "@/components/FAQ";
+import Companies from "@/components/Companies";
 
 export default function LandingPage() {
-  const [openFaq, setOpenFaq] = useState(0);
-
   return (
     <div className="min-h-screen overflow-x-hidden bg-white font-sans text-gray-800">
       {/* ================= HERO ================= */}
@@ -659,63 +611,8 @@ export default function LandingPage() {
       {/* ================= TESTIMONIALS ================= */}
       <Testimonials />
 
-      <section className="py-20">
-        <div className="mx-auto max-w-7xl px-4">
-          <div className="mb-12 text-center">
-            <h2 className="text-3xl font-bold lg:text-5xl">
-              Frequently Asked Questions
-            </h2>
-
-            <p className="mt-4 text-gray-600">Everything you need to know.</p>
-          </div>
-
-          <div className="space-y-4">
-            {faqs.map((faq, index) => (
-              <div key={index} className="overflow-hidden rounded-xl border">
-                <button
-                  onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
-                  className="flex w-full items-center justify-between bg-white px-6 py-5 text-left font-semibold"
-                >
-                  {faq.q}
-
-                  <span className="text-xl">
-                    {openFaq === index ? "−" : "+"}
-                  </span>
-                </button>
-
-                {openFaq === index && faq.a && (
-                  <div className="bg-gray-50 px-6 py-5 text-gray-600">
-                    {faq.a}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="pb-20">
-        <div className="mx-auto max-w-[1720px] px-4">
-          <h2 className="mb-12 text-center text-3xl font-bold lg:text-5xl">
-            Trusted by over 800+ companies
-          </h2>
-
-          <div className="grid grid-cols-2 gap-8 text-center sm:grid-cols-3 lg:grid-cols-6">
-            {companies.map((company) => (
-              <div
-                key={company.id}
-                className="rounded-lg p-6 font-bold text-gray-500 transition hover:shadow-md"
-              >
-                <img
-                  src={company.logo}
-                  alt={company.name}
-                  className="max-w-full h-12 object-contain"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <FAQ />
+      <Companies />
     </div>
   );
 }
