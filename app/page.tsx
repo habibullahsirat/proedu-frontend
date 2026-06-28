@@ -653,13 +653,46 @@ const faqs = [
   { q: "What other services are you compatible with?", a: "", open: false },
 ];
 
-const partners = [
-  "Coursera",
-  "Udemy",
-  "FedEx",
-  "EDUCATION",
-  "ELECOM",
-  "indeed",
+// const partners = [
+//   "/logo1.png",
+//   "/logo2.png",
+//   "/logo3.png",
+//   "/logo4.png",
+//   "/logo5.png",
+//   "/logo6.png",
+// ];
+
+const companies = [
+  {
+    id: 1,
+    name: "Coursera",
+    logo: "logo1.png",
+  },
+  {
+    id: 2,
+    name: "Udemy",
+    logo: "logo2.png",
+  },
+  {
+    id: 3,
+    name: "FedEx",
+    logo: "logo3.png",
+  },
+  {
+    id: 4,
+    name: "Education",
+    logo: "logo4.png",
+  },
+  {
+    id: 5,
+    name: "Elecom",
+    logo: "logo5.png",
+  },
+  {
+    id: 6,
+    name: "Indeed",
+    logo: "logo6.png",
+  },
 ];
 
 function StarRating({ count = 5, filled = 4 }) {
@@ -898,9 +931,9 @@ export default function LandingPage() {
           <div className="overflow-hidden rounded-2xl bg-[#F4FAFD]">
             <div className="grid items-center lg:grid-cols-2">
               <div
-                className="min-h-[350px] bg-cover bg-center lg:min-h-[700px]"
+                className="min-h-[350px] bg-cover bg-right lg:min-h-[700px]"
                 style={{
-                  backgroundImage: "url(img.png)",
+                  backgroundImage: "url(/man.jpg)",
                 }}
               />
 
@@ -1267,12 +1300,16 @@ export default function LandingPage() {
           </h2>
 
           <div className="grid grid-cols-2 gap-8 text-center sm:grid-cols-3 lg:grid-cols-6">
-            {partners.map((partner) => (
+            {companies.map((company) => (
               <div
-                key={partner}
-                className="rounded-lg border p-6 font-bold text-gray-500 transition hover:shadow-md"
+                key={company.id}
+                className="rounded-lg p-6 font-bold text-gray-500 transition hover:shadow-md"
               >
-                {partner}
+                <img
+                  src={company.logo}
+                  alt={company.name}
+                  className="max-w-full h-12 object-contain"
+                />
               </div>
             ))}
           </div>
