@@ -688,7 +688,7 @@ export default function LandingPage() {
       {/* ================= NAVBAR ================= */}
 
       <nav className="sticky top-0 z-50 border-b bg-white/95 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+        <div className="mx-auto flex max-w-[1720px] items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
           <h1 className="text-2xl font-bold text-[#4A4A4A] lg:text-4xl">
             Pro Edu
           </h1>
@@ -769,7 +769,7 @@ export default function LandingPage() {
       {/* Hero */}
       {/* ================= HERO ================= */}
 
-      <section className="mx-auto mt-6 max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="mx-auto mt-6 max-w-[1720px] px-4 sm:px-6 lg:px-8">
         <div className="relative overflow-hidden rounded-2xl">
           <div
             className="h-[400px] sm:h-[500px] lg:h-[700px] w-full bg-cover bg-center"
@@ -837,7 +837,7 @@ export default function LandingPage() {
       {/* ================= COURSES ================= */}
 
       <section className="py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-[1720px] px-4 sm:px-6 lg:px-8">
           <div className="mb-12 text-center">
             <h2 className="text-3xl font-bold text-[#1D1D1D] md:text-4xl lg:text-5xl">
               Discover Our Popular Courses
@@ -893,7 +893,7 @@ export default function LandingPage() {
       {/* ================= ABOUT ================= */}
 
       <section className="pb-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-[1720px] px-4 sm:px-6 lg:px-8">
           <div className="overflow-hidden rounded-2xl bg-[#F4FAFD]">
             <div className="grid items-center lg:grid-cols-2">
               <div
@@ -948,7 +948,7 @@ export default function LandingPage() {
       {/* ================= CTA ================= */}
 
       <section className="pb-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-[1720px] px-4 sm:px-6 lg:px-8">
           <div className="rounded-2xl bg-[#289BDE] px-8 py-12 lg:px-16 lg:py-16">
             <div className="flex flex-col items-center justify-between gap-8 lg:flex-row">
               <div className="max-w-2xl text-center lg:text-left">
@@ -974,7 +974,7 @@ export default function LandingPage() {
       {/* ================= STUDENTS ================= */}
 
       <section className="pb-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-[1720px] px-4 sm:px-6 lg:px-8">
           <div className="mb-12">
             <h2 className="text-center text-3xl font-bold text-[#1D1D1D] md:text-4xl lg:text-left lg:text-5xl">
               Meet Our Successful Students
@@ -1022,7 +1022,7 @@ export default function LandingPage() {
       {/* ================= TESTIMONIALS ================= */}
 
       <section className="pb-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-[1720px] px-4 sm:px-6 lg:px-8">
           <div className="mb-12 text-center">
             <h2 className="text-3xl font-bold text-[#1D1D1D] md:text-4xl lg:text-5xl">
               Some Students Feedback
@@ -1225,7 +1225,7 @@ export default function LandingPage() {
       </section>
 
       <section className="py-20">
-        <div className="mx-auto max-w-4xl px-4">
+        <div className="mx-auto max-w-7xl px-4">
           <div className="mb-12 text-center">
             <h2 className="text-3xl font-bold lg:text-5xl">
               Frequently Asked Questions
@@ -1260,7 +1260,7 @@ export default function LandingPage() {
       </section>
 
       <section className="pb-20">
-        <div className="mx-auto max-w-7xl px-4">
+        <div className="mx-auto max-w-[1720px] px-4">
           <h2 className="mb-12 text-center text-3xl font-bold lg:text-5xl">
             Trusted by over 800+ companies
           </h2>
@@ -1279,7 +1279,7 @@ export default function LandingPage() {
       </section>
 
       <footer className="bg-[#161616] py-16 text-white">
-        <div className="mx-auto max-w-7xl px-4">
+        <div className="mx-auto max-w-[1720px] px-4">
           <div className="space-y-6 text-center">
             <h2 className="text-4xl font-bold">Pro Edu</h2>
 
