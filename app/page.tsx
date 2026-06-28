@@ -573,6 +573,7 @@
 
 // //////////////////////////////////////////////////////////////////////
 "use client";
+import Image from "next/image";
 import { useState } from "react";
 const courses = [
   {
@@ -614,10 +615,10 @@ const courses = [
 ];
 
 const students = [
-  { name: "Awlad Hossain", role: "UIUX Designer", img: "img.png" },
-  { name: "Jannatul Islam", role: "Motion Design", img: "img.png" },
-  { name: "Imran Hossain", role: "Graphic Designer", img: "img.png" },
-  { name: "Nishi Akter", role: "Web Developer", img: "img.png" },
+  { name: "Awlad Hossain", role: "UIUX Designer", img: "/user1.jpg" },
+  { name: "Jannatul Islam", role: "Motion Design", img: "user2.jpg" },
+  { name: "Imran Hossain", role: "Graphic Designer", img: "user3.jpg" },
+  { name: "Nishi Akter", role: "Web Developer", img: "user4.jpg" },
 ];
 
 const testimonials = [
