@@ -687,7 +687,7 @@ export default function LandingPage() {
     <div className="min-h-screen overflow-x-hidden bg-white font-sans text-gray-800">
       {/* ================= NAVBAR ================= */}
 
-      <nav className="sticky top-0 z-50 border-b bg-white/95 backdrop-blur">
+      <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur">
         <div className="mx-auto flex max-w-[1720px] items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
           <h1 className="text-2xl font-bold text-[#4A4A4A] lg:text-4xl">
             Pro Edu
@@ -774,7 +774,7 @@ export default function LandingPage() {
           <div
             className="h-[400px] sm:h-[500px] lg:h-[700px] w-full bg-cover bg-center"
             style={{
-              backgroundImage: "url(img.png)",
+              backgroundImage: "url(/hero.png)",
             }}
           />
 
