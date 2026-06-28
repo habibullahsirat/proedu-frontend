@@ -575,45 +575,8 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
-
-const courses = [
-  {
-    title: "Fundamental Of UI/UX Design",
-    desc: "Some quick example text to build on the card title and make up the bulk of the card.",
-    price: "Price : 20$",
-    img: "img.png",
-  },
-  {
-    title: "Javascript Basic to Advanced",
-    desc: "Some quick example text to build on the card title and make up the bulk of the card.",
-    price: "Price : 20$",
-    img: "img.png",
-  },
-  {
-    title: "Fullstack Web Development",
-    desc: "Some quick example text to build on the card title and make up the bulk of the card.",
-    price: "Price : 20$",
-    img: "img.png",
-  },
-  {
-    title: "Digital Marketing",
-    desc: "Some quick example text to build on the card title and make up the bulk of the card.",
-    price: "Price : 20$",
-    img: "img.png",
-  },
-  {
-    title: "Photography Basic Rules",
-    desc: "Some quick example text to build on the card title and make up the bulk of the card.",
-    price: "Price : 20$",
-    img: "img.png",
-  },
-  {
-    title: "Motion Graphics",
-    desc: "Some quick example text to build on the card title and make up the bulk of the card.",
-    price: "Price : 20$",
-    img: "img.png",
-  },
-];
+import Hero from "@/components/Hero";
+import Courses from "@/components/Courses";
 
 const students = [
   { name: "Awlad Hossain", role: "UIUX Designer", img: "/user1.jpg" },
@@ -707,214 +670,15 @@ function StarRating({ count = 5, filled = 4 }) {
 export default function LandingPage() {
   const [openFaq, setOpenFaq] = useState(0);
   const [testimonialIdx, setTestimonialIdx] = useState(0);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <div className="min-h-screen overflow-x-hidden bg-white font-sans text-gray-800">
-      {/* ================= NAVBAR ================= */}
-
-      <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur">
-        <div className="mx-auto flex max-w-[1720px] items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-          <h1 className="text-2xl font-bold text-[#4A4A4A] lg:text-4xl">
-            Pro Edu
-          </h1>
-
-          {/* Desktop Menu */}
-
-          <ul className="hidden items-center gap-8 text-[#777777] lg:flex">
-            {["Home", "Courses", "Deals", "Success", "About"].map((item) => (
-              <li
-                key={item}
-                className="cursor-pointer transition hover:text-[#289BDE]"
-              >
-                {item}
-              </li>
-            ))}
-          </ul>
-
-          {/* Desktop Button */}
-
-          <button className="hidden rounded border border-[#289BDE] px-6 py-2 font-semibold text-[#289BDE] transition hover:bg-[#289BDE] hover:text-white lg:block">
-            Register
-          </button>
-
-          {/* Mobile Button */}
-
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="rounded p-2 lg:hidden"
-          >
-            <svg
-              className="h-7 w-7"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={2}
-              viewBox="0 0 24 24"
-            >
-              {mobileMenuOpen ? (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              ) : (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              )}
-            </svg>
-          </button>
-        </div>
-
-        {/* Mobile Menu */}
-
-        {mobileMenuOpen && (
-          <div className="border-t bg-white lg:hidden">
-            <ul className="space-y-1 px-6 py-5">
-              {["Home", "Courses", "Deals", "Success", "About"].map((item) => (
-                <li
-                  key={item}
-                  className="cursor-pointer rounded px-3 py-2 transition hover:bg-gray-100 hover:text-[#289BDE]"
-                >
-                  {item}
-                </li>
-              ))}
-            </ul>
-
-            <div className="px-6 pb-6">
-              <button className="w-full rounded bg-[#289BDE] py-3 font-semibold text-white">
-                Register
-              </button>
-            </div>
-          </div>
-        )}
-      </nav>
-
-      {/* Hero */}
       {/* ================= HERO ================= */}
-
-      <section className="mx-auto mt-6 max-w-[1720px] px-4 sm:px-6 lg:px-8">
-        <div className="relative overflow-hidden rounded-2xl">
-          <div
-            className="h-[400px] sm:h-[500px] lg:h-[700px] w-full bg-cover bg-center"
-            style={{
-              backgroundImage: "url(/hero.png)",
-            }}
-          />
-
-          <div className="absolute inset-0 flex items-center justify-center bg-black/60 px-6">
-            <div className="max-w-4xl text-center">
-              <h1 className="mb-6 text-3xl font-bold leading-tight text-white sm:text-5xl lg:text-7xl">
-                Get Started Digital Learning
-              </h1>
-
-              <p className="mx-auto mb-8 max-w-3xl text-sm leading-7 text-gray-200 sm:text-lg">
-                It is a long established fact that a reader will be distracted
-                by the readable content of a page when looking at its layout.
-              </p>
-
-              <button className="rounded bg-[#289BDE] px-8 py-4 font-semibold text-white transition hover:opacity-90">
-                Get Started
-              </button>
-            </div>
-          </div>
-
-          {/* Left Arrow */}
-
-          <button className="absolute left-3 top-1/2 hidden -translate-y-1/2 rounded-full bg-white/20 p-3 backdrop-blur transition hover:bg-[#289BDE] md:flex">
-            <svg
-              className="h-5 w-5 text-white"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={2}
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
-          </button>
-
-          {/* Right Arrow */}
-
-          <button className="absolute right-3 top-1/2 hidden -translate-y-1/2 rounded-full bg-white/20 p-3 backdrop-blur transition hover:bg-[#289BDE] md:flex">
-            <svg
-              className="h-5 w-5 text-white"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={2}
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </button>
-        </div>
-      </section>
+      <Hero />
 
       {/* Courses */}
       {/* ================= COURSES ================= */}
-
-      <section className="py-16">
-        <div className="mx-auto max-w-[1720px] px-4 sm:px-6 lg:px-8">
-          <div className="mb-12 text-center">
-            <h2 className="text-3xl font-bold text-[#1D1D1D] md:text-4xl lg:text-5xl">
-              Discover Our Popular Courses
-            </h2>
-
-            <p className="mx-auto mt-4 max-w-2xl text-gray-600">
-              It is a long established fact that a reader will be distracted by
-              the readable content of a page when looking at its layout.
-            </p>
-          </div>
-
-          <div className="grid gap-8 lg:grid-cols-2">
-            {courses.map((course, index) => (
-              <div
-                key={index}
-                className="overflow-hidden rounded-xl border bg-white shadow-sm transition hover:shadow-lg"
-              >
-                <div className="flex flex-col md:flex-row">
-                  <div
-                    className="h-60 w-full bg-cover bg-center md:h-auto md:w-56"
-                    style={{
-                      backgroundImage: "url(img.png)",
-                    }}
-                  />
-
-                  <div className="flex flex-1 flex-col justify-between p-6">
-                    <div>
-                      <h3 className="mb-3 text-xl font-semibold text-[#4A4A4A]">
-                        {course.title}
-                      </h3>
-
-                      <p className="text-gray-600">{course.desc}</p>
-                    </div>
-
-                    <h4 className="mt-6 text-xl font-bold text-[#289BDE]">
-                      {course.price}
-                    </h4>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-12 text-center">
-            <button className="rounded-lg bg-[#289BDE] px-8 py-3 font-semibold text-white transition hover:opacity-90">
-              See More Courses
-            </button>
-          </div>
-        </div>
-      </section>
-
+      <Courses />
       {/* About Institute */}
       {/* ================= ABOUT ================= */}
 
@@ -1322,31 +1086,6 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
-
-      <footer className="bg-[#161616] py-16 text-white">
-        <div className="mx-auto max-w-[1720px] px-4">
-          <div className="space-y-6 text-center">
-            <h2 className="text-4xl font-bold">Pro Edu</h2>
-
-            <p className="mx-auto max-w-xl text-gray-300">
-              Office 41, Zawaya Building, Ghala Muscat, Sultanate of Oman
-            </p>
-
-            <div className="flex justify-center gap-4">
-              {["F", "TW", "IN", "TK"].map((icon) => (
-                <div
-                  key={icon}
-                  className="flex h-11 w-11 items-center justify-center rounded-full bg-[#242424] transition hover:bg-[#289BDE]"
-                >
-                  {icon}
-                </div>
-              ))}
-            </div>
-
-            <p className="text-gray-400">Privacy Policy • Terms of Use</p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }

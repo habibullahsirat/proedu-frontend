@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import NavBar from "@/components/shared/NavBar";
+import Footer from "@/components/shared/Footer";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -31,6 +32,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <NavBar />
         {children}
+        <Footer />
       </body>
     </html>
   );
