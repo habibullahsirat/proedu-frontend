@@ -575,6 +575,7 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
+
 const courses = [
   {
     title: "Fundamental Of UI/UX Design",
@@ -652,15 +653,6 @@ const faqs = [
   { q: "What other services are you compatible with?", a: "", open: false },
   { q: "What other services are you compatible with?", a: "", open: false },
 ];
-
-// const partners = [
-//   "/logo1.png",
-//   "/logo2.png",
-//   "/logo3.png",
-//   "/logo4.png",
-//   "/logo5.png",
-//   "/logo6.png",
-// ];
 
 const companies = [
   {
@@ -1026,12 +1018,27 @@ export default function LandingPage() {
                 key={student.name}
                 className="overflow-hidden rounded-xl border bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"
               >
-                <div
+                {/* <div
                   className="aspect-[4/5] bg-cover bg-center"
                   style={{
-                    backgroundImage: "url(img.png)",
+                    backgroundImage: `url(${student.img})`,
                   }}
-                />
+                /> */}
+                <div className="overflow-hidden">
+                  <img
+                    src={student.img}
+                    alt={student.name}
+                    className="h-full w-full object-center"
+                  />
+                </div>
+                {/* <div className="relative aspect-[4/5] overflow-hidden">
+                  <Image
+                    src={student.img}
+                    alt={student.name}
+                    fill
+                    className="object-cover"
+                  />
+                </div> */}
 
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-[#4A4A4A]">
