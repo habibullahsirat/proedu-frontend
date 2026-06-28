@@ -577,6 +577,8 @@ import Image from "next/image";
 import { useState } from "react";
 import Hero from "@/components/Hero";
 import Courses from "@/components/Courses";
+import About from "@/components/About";
+import CTA from "@/components/CTA";
 
 const students = [
   { name: "Awlad Hossain", role: "UIUX Designer", img: "/user1.jpg" },
@@ -679,86 +681,15 @@ export default function LandingPage() {
       {/* Courses */}
       {/* ================= COURSES ================= */}
       <Courses />
+
       {/* About Institute */}
       {/* ================= ABOUT ================= */}
-
-      <section className="pb-20">
-        <div className="mx-auto max-w-[1720px] px-4 sm:px-6 lg:px-8">
-          <div className="overflow-hidden rounded-2xl bg-[#F4FAFD]">
-            <div className="grid items-center lg:grid-cols-2">
-              <div
-                className="min-h-[350px] bg-cover bg-right lg:min-h-[700px]"
-                style={{
-                  backgroundImage: "url(/man.jpg)",
-                }}
-              />
-
-              <div className="p-8 md:p-12 lg:p-16">
-                <h2 className="mb-6 text-3xl font-bold text-[#1D1D1D] lg:text-5xl">
-                  Explore The eLearning Institute
-                </h2>
-
-                <p className="mb-8 leading-8 text-gray-600">
-                  There are many variations of passages of Lorem Ipsum
-                  available, but the majority have suffered alteration in some
-                  form, by injected humour, or randomised words which don't look
-                  even slightly believable.
-                </p>
-
-                <div className="grid grid-cols-1 gap-8 sm:grid-cols-3">
-                  <div>
-                    <h3 className="text-4xl font-bold text-[#1D1D1D]">3.2K+</h3>
-
-                    <p className="mt-2 text-gray-600">Online Course</p>
-                  </div>
-
-                  <div>
-                    <h3 className="text-4xl font-bold text-[#1D1D1D]">600+</h3>
-
-                    <p className="mt-2 text-gray-600">Expert Members</p>
-                  </div>
-
-                  <div>
-                    <h3 className="text-4xl font-bold text-[#1D1D1D]">1K+</h3>
-
-                    <p className="mt-2 text-gray-600">Rating & Review</p>
-                  </div>
-                </div>
-
-                <button className="mt-10 rounded-lg bg-[#289BDE] px-8 py-3 font-semibold text-white transition hover:opacity-90">
-                  Read More
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <About />
 
       {/* CTA */}
       {/* ================= CTA ================= */}
 
-      <section className="pb-20">
-        <div className="mx-auto max-w-[1720px] px-4 sm:px-6 lg:px-8">
-          <div className="rounded-2xl bg-[#289BDE] px-8 py-12 lg:px-16 lg:py-16">
-            <div className="flex flex-col items-center justify-between gap-8 lg:flex-row">
-              <div className="max-w-2xl text-center lg:text-left">
-                <h2 className="mb-4 text-3xl font-bold text-white lg:text-5xl">
-                  Ready to Join?
-                </h2>
-
-                <p className="text-gray-100 leading-7">
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                </p>
-              </div>
-
-              <button className="rounded-lg bg-white px-8 py-3 font-semibold text-[#289BDE] transition hover:bg-gray-100">
-                Register Now
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <CTA />
 
       {/* Students */}
       {/* ================= STUDENTS ================= */}
